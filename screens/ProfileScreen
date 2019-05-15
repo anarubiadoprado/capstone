@@ -1,0 +1,51 @@
+import React, {Component} from 'react';
+import { Button, Text, View, Image } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+
+
+
+
+class Profile extends Component{
+
+
+render() {
+
+return(
+    <View style={styles.container}>
+    <Image style={styles.avatar source={{}} />
+    <View style={styles.bodyContainer} >
+    <Text style= {styles.register}>Welcome back, {{name}} </Text>
+    </View>
+    <View style={styles.alertsContainer}>
+    <Text style={styles.alertsTitle}>Alerts you have created: </Text>
+    </View>
+
+
+
+    </View>
+    );
+  }
+}
+
+ const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    avatar: {
+
+    },
+    bodyContainer: {
+
+    },
+    register: {
+    },
+    alertsContainer: {
+    },
+    alertsTitle: {
+    },
+  });
+
+export default Profile;
