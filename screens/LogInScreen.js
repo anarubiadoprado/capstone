@@ -8,7 +8,7 @@ const Form = t.form.Form;
 
 const logInForm = t.struct({
         username: t.String,
-        password: t.String
+        password: t.Password
     });
 
 class LogInScreen extends Component {
@@ -31,6 +31,7 @@ class LogInScreen extends Component {
                />
 
              <Button
+                style= {styles.button}
                 title="Log In"
                 onPress={this.handleSubmit}
              />
@@ -47,7 +48,12 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-    }
+    },
+    button: {
+     backgroundColor: '#906FB3',
+     padding: 25,
+     borderRadius: 2,
+    },
   });
 
 

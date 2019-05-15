@@ -11,6 +11,12 @@ import t from 'tcomb-form-native';
 
 
 class SingUpForm extends Component {
+
+     handleSingUp = () => {
+            const value = this.SingUpForm.getValue(); // use that ref to get the form value
+            console.log('value: ', value);
+        };
+
     render() {
         return(
         <View style={styles.singup}>
@@ -26,7 +32,8 @@ class SingUpForm extends Component {
           <TextInput style={styles.textinput} placeholder='password'
            secureTextEntry={true} underlineColor={'trasparent'} />
 
-           <TouchableOpacity style={styles.button}>
+           <TouchableOpacity style={styles.button}
+               onPress = {this.handleSingUp}>
            <Text style= {styles.btntext}>Sing Up</Text>
            </TouchableOpacity>
            </View>
@@ -39,7 +46,7 @@ class SingUpForm extends Component {
 }
 
 
-const styles = StyleSheet.creare({
+const styles = StyleSheet.create({
     singup: {
 
     },
@@ -55,12 +62,4 @@ const styles = StyleSheet.creare({
 
 
 });
-/*const singUpForm = t.struct({
-        fullname: t.String,
-        email: t.String,
-        username: t.String,
-        zipcode: t.maybe(t.Number),
-        password: t.String
-    });*/
-
-export default singUpForm;
+export default SingUpForm;
