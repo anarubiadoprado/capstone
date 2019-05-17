@@ -6,21 +6,28 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 
 class Profile extends Component{
+static navigationOptions = {
+            title: 'Your Profile'
+        };
+
+    profileName = () => {
+     this.state('profileName' = 'Ana');
+    };
+
+    _makeAPost = () => {
+        this.props.navigation.navigate('MakeAPost');
+        };
+
 
 
 render() {
 
 return(
     <View style={styles.container}>
+    <Button style={styles.addButton} onPress = {this._makeAPost} />
     <Image style={styles.avatar source={{}} />
-    <View style={styles.bodyContainer} >
-    <Text style= {styles.register}>Welcome back, {{name}} </Text>
-    </View>
-    <View style={styles.alertsContainer}>
+    <Text style= {styles.register}>Welcome back, (this.profileName) </Text>
     <Text style={styles.alertsTitle}>Alerts you have created: </Text>
-    </View>
-
-
 
     </View>
     );

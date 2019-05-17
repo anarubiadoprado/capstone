@@ -6,23 +6,20 @@ import t from 'tcomb-form-native';
 
 const Form = t.form.Form;
 
+
 const logInForm = t.struct({
         username: t.String,
-        password: t.Password
-    });
+        password: t.Password,
+        rememberMe: t.Boolean        // a boolean
 
+    });
 class LogInScreen extends Component {
     static navigationOptions = {
         title: 'LogIn Page'
     };
 
-
-    handleSubmit = () => {
-        const value = this.logInForm.getValue(); // use that ref to get the form value
-        console.log('value: ', value);
-    }
-
     render() {
+
         return(
           <View style= {styles.container}>
              <Form
@@ -33,7 +30,7 @@ class LogInScreen extends Component {
              <Button
                 style= {styles.button}
                 title="Log In"
-                onPress={this.handleSubmit}
+                onPress={() => this.props.navigation.navigate('Profile')}
              />
 
           </View>
