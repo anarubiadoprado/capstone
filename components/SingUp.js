@@ -41,7 +41,7 @@ class SingUpForm extends Component {
            <Text style= {styles.btntext}>Sing Up</Text>
            </TouchableOpacity>
            </View>
-        )
+        );
     }
 
 
@@ -74,6 +74,6 @@ const styles = StyleSheet.create({
 
     },
 
-
 });
+
 export default SingUpForm;
