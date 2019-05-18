@@ -24,7 +24,7 @@ class SingUpForm extends Component {
         return(
 
         <View style={styles.singup}>
-         <Text style={styles.formtitle}> Sing Up </Text>
+         <Text style={styles.formtitle}>Register Page </Text>
 
           <TextInput style={styles.textinput} placeholder='First Name'
              underlineColor={'trasparent'} />

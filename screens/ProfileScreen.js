@@ -3,15 +3,13 @@ import { Button, Text, View, Image } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 
-
-
 class Profile extends Component{
 static navigationOptions = {
             title: 'Your Profile'
         };
 
     profileName = () => {
-     this.state('profileName' = 'Ana');
+     this.state(profileName = 'Ana');
     };
 
     _makeAPost = () => {
@@ -21,12 +19,14 @@ static navigationOptions = {
 
 
 render() {
-
 return(
     <View style={styles.container}>
     <Button style={styles.addButton} onPress = {this._makeAPost} />
-    <Image style={styles.avatar source={{}} />
-    <Text style= {styles.register}>Welcome back, (this.profileName) </Text>
+    <Image
+        style={styles.avatar}
+        source={require('../assets/images/logo.png')}
+     />
+    <Text style= {styles.register}>Welcome back, (this.state.profileName) </Text>
     <Text style={styles.alertsTitle}>Alerts you have created: </Text>
 
     </View>
@@ -42,6 +42,8 @@ return(
       justifyContent: 'center',
     },
     avatar: {
+     width: undefined,
+     height: undefined
 
     },
     bodyContainer: {

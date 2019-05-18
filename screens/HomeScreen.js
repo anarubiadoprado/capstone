@@ -13,7 +13,7 @@ class HomeScreen extends Component {
         <View style= {styles.container}>
         <Button
           style= {styles.button}
-          title="Sing Up"
+          title="Sing In"
           onPress={() => this.props.navigation.navigate('SingUp')}
         />
         <Button
